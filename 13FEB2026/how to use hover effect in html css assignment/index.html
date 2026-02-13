@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover effect assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       .box{
+        height: 200px;
+        width: 200px;
+        background: aqua;
+       background-image: url(hover.png);
+       background-size: cover;
+       margin: 250px auto;
+       position: relative;
+       box-shadow: 5px 5px 3px 3px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .layout{
+        width: 200px;
+        height: 200px;
+        background: rgba(0,0,0,0.5);
+          transition-property: all;
+            transition-duration: 0.5s;
+          transition-timing-function: ease-in-out;
+          position: absolute;
+          top: -200px;
+          left: 0px;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in-out;
+          }
+
+          .box:hover .layout {
+            top: 0px;
+          }
+
+          .layout > a{
+            display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: #fff;
+                border-radius: 40px;
+                text-align: center;
+                line-height: 40px;
+                text-decoration: none;
+                position: absolute;
+                top: 80px;
+                left: 50px;
+                color: #464646;
+            
+            }
+           
+                .banchor {
+                    left: 100px !important;
+                }
+
+
+    </style>
+</head>
+<body>
+    <div class="box common">
+    <div class="layout common">
+        <a href="#"><i class="fa-solid fa-link"></i></a>
+        <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
+    </div>
+    
+    </div>
+     
+</body>
+</html>
