@@ -1,72 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hover effect assignment</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-       .box{
+      #parent {
+        
+        justify-content: start;
+        gap: 170px;
+        display: flex;
+      
+      }
+
+      .commonbox {
         height: 200px;
         width: 200px;
-        background: aqua;
-       background-image: url(hover.png);
-       background-size: cover;
-       margin: 250px auto;
-       position: relative;
-       box-shadow: 5px 5px 3px 3px rgba(0,0,0,0.5);
-      overflow: hidden;
-    }
+     background-image: url(photo-1.jpg);
+        background-size: cover;
 
-    .layout{
+        position: relative;
+        box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+      }
+
+      .commonlayout {
         width: 200px;
         height: 200px;
-        background: rgba(0,0,0,0.5);
-          transition-property: all;
-            transition-duration: 0.5s;
-          transition-timing-function: ease-in-out;
-          position: absolute;
-          top: -200px;
-          left: 0px;
-          transition-duration: 0.5s;
-          transition-timing-function: ease-in-out;
-          }
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+      }
 
-          .box:hover .layout {
-            top: 0px;
-          }
+      .commonlayout > a {
+      
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 40px;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        position: absolute;
+        top: 80px;
+        left: 50px;
+        color: #464646;
+      }
 
-          .layout > a{
-            display: inline-block;
-                width: 40px;
-                height: 40px;
-                background: #fff;
-                border-radius: 40px;
-                text-align: center;
-                line-height: 40px;
-                text-decoration: none;
-                position: absolute;
-                top: 80px;
-                left: 50px;
-                color: #464646;
-            
-            }
-           
-                .banchor {
-                    left: 100px !important;
-                }
+      .banchor {
+        left: 100px !important;
+      }
+
+      .layout1 {
+        top: -200px;
+        left: 0px;
+      }
+
+      .box1:hover .layout1 {
+        top: 0px;
+      }
+
+     .layout2 {
+        left: -200px;
+      }
+
+      .box2:hover .layout2 {
+        left: 0px;
+      }
+
+             
+      
+
+      .layout3{
+       bottom: -200px;
+        
+      }
+
+      .box3:hover .layout3{
+        bottom: 0px;
+      }
+
+      .layout4{
+       right:-200px;
+        
+      }
+
+      .box4:hover .layout4{
+        right: 0px;
+      }
+
+      
+
+
 
 
     </style>
-</head>
-<body>
-    <div class="box common">
-    <div class="layout common">
-        <a href="#"><i class="fa-solid fa-link"></i></a>
-        <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
+  </head>
+  <body>
+    <div id="parent">
+      <div class="box1 commonbox">
+        <div class="commonlayout layout1">
+          <a href="#"><i class="fa-solid fa-link"></i></a>
+          <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </div>
+      <div class="box2 commonbox">
+        <div class="commonlayout layout2">
+          <a href="#"><i class="fa-solid fa-link"></i></a>
+          <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </div>
+      <div class="box3 commonbox">
+        <div class="layout3 commonlayout">
+           <a href="#"><i class="fa-solid fa-link"></i></a>
+          <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
+
+        </div>
+      </div>
+      <div class="box4 commonbox">
+        <div class="layout4 commonlayout">
+           <a href="#"><i class="fa-solid fa-link"></i></a>
+          <a class="banchor" href="#"><i class="fa-solid fa-search"></i></a>
     </div>
-    
-    </div>
-     
-</body>
+  </body>
 </html>
